@@ -1,6 +1,6 @@
 {% set name = "pyrad_arm" %}
-{% set version = "0.5.0" %}
-{% set sha256 = "5591885639efe4ca78eb47b30448e52ccb37ab2ad67840ba89a2d656f0c4bcc6" %}
+{% set version = "1.0.0" %}
+{% set sha256 = "b56da22777de90c2063c4d88314dc36e4a9a937a6a98c9a71665383ec0f5376c" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py2k or win]
   script:
     - {{ PYTHON }} -m pip install . --no-deps -vvv
