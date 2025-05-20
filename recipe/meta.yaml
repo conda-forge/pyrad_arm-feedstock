@@ -1,13 +1,13 @@
 {% set name = "pyrad_arm" %}
-{% set version = "2.0.0" %}
-{% set sha256 = "a6ccac1164455da54f55b7e47ddc6136ca68908a9d691642de079906fd9cc4a5" %}
+{% set version = "2.0.3" %}
+{% set sha256 = "d77edc406431159b17436fe9cc4396b0e57a386dc6e6d18256f47216437dc0fe" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/pyrad_mch/pyrad_mch-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/p/pyrad_mch/pyrad_mch-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -19,6 +19,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
 
   host:
     - python
